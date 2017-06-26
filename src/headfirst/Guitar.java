@@ -4,10 +4,14 @@ package headfirst;
  * Created by Administrator on 2017/6/23.
  */
 public class Guitar {
-    private String serialNumber, builder, model, type, backWood, topWood;
+    private Builder builder;
+    private Type type;
+    private Wood backWood, topWood;
+
+    private String serialNumber, model;
     private double price;
 
-    public Guitar(String serialNumber, String builder, String model, String type, String backWood, String topWood, double price) {
+    public Guitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood, double price) {
         this.serialNumber = serialNumber;
         this.builder = builder;
         this.model = model;
@@ -29,7 +33,7 @@ public class Guitar {
         this.price = newPrice;
     }
 
-    public String getBuilder() {
+    public Builder getBuilder() {
         return builder;
     }
 
@@ -37,15 +41,15 @@ public class Guitar {
         return model;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public String getBackWood() {
+    public Wood getBackWood() {
         return backWood;
     }
 
-    public String getTopWood() {
+    public Wood getTopWood() {
         return topWood;
     }
 }
