@@ -1,5 +1,6 @@
 package headfirst;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +33,8 @@ public class Inventory {
         return null;
     }
 
-    public Guitar search(Guitar searchGuitar) {
+    public List search(Guitar searchGuitar) {
+        List matchingGuitars = new ArrayList ();
         for (Iterator iterator = guitars.iterator (); iterator.hasNext ();) {
             Guitar guitar = (Guitar)iterator.next ();
             if (searchGuitar.getBuilder () != guitar.getBuilder ())
@@ -46,8 +48,8 @@ public class Inventory {
                 continue;
             if (searchGuitar.getTopWood () != guitar.getTopWood ())
                 continue;
-            return guitar;
+            matchingGuitars.add (guitar);
         }
-        return null;
+        return matchingGuitars;
     }
 }
