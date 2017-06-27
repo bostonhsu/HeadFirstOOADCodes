@@ -9,13 +9,22 @@ public class GuitarSpec {
     private Wood backWood, topWood;
     private String model;
 
-    public GuitarSpec(Builder builder, Type type, Wood backWood, Wood topWood, String model) {
+
+    private int numStrings;
+
+    public GuitarSpec(Builder builder, Type type, Wood backWood, Wood topWood, String model, int numStrings) {
         this.builder = builder;
         this.type = type;
         this.backWood = backWood;
         this.topWood = topWood;
         this.model = model;
+        this.numStrings = numStrings;
     }
+
+    public int getNumStrings() {
+        return numStrings;
+    }
+
     public Builder getBuilder() {
         return builder;
     }
