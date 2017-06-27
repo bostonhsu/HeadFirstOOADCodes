@@ -14,7 +14,7 @@ public class DogDoorSimulator {
         System.out.println ("Fido's all done...");
         //remote.pressButton ();
         try {
-            Thread.currentThread ().wait (10000);
+            Thread.currentThread ().sleep (10000);
         } catch (InterruptedException e) {
         }
         System.out.println ("...but he's stuck outside!");

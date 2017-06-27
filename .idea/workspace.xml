@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/src/headsecond/DogDoorSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -26,13 +26,14 @@
       <file leaf-file-name="Remote.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/headsecond/Remote.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="266">
+              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#211#212#0" expanded="true" />
                 <element signature="e#249#250#0" expanded="true" />
                 <element signature="e#537#724#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -506,6 +507,7 @@
             <element signature="e#211#212#0" expanded="true" />
             <element signature="e#249#250#0" expanded="true" />
             <element signature="e#537#724#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -642,13 +644,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/headsecond/Remote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="266">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#211#212#0" expanded="true" />
             <element signature="e#249#250#0" expanded="true" />
             <element signature="e#537#724#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,7 +659,7 @@
     <entry file="file://$PROJECT_DIR$/src/headsecond/DogDoorSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
