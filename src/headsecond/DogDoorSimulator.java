@@ -6,21 +6,23 @@ package headsecond;
 public class DogDoorSimulator {
     public static void main(String[] args) {
         DogDoor dogDoor = new DogDoor ();
+        BarkRecognizer barkRecognizer = new BarkRecognizer (dogDoor);
         Remote remote = new Remote (dogDoor);
-        System.out.println ("Fido barks to go outsides...");
-        remote.pressButton ();
+
+        System.out.println ("Fido starts barking...");
+        barkRecognizer.recognize ("Woof");
+
         System.out.println ("Fido has gone outside...");
-        //remote.pressButton ();
         System.out.println ("Fido's all done...");
-        //remote.pressButton ();
         try {
             Thread.currentThread ().sleep (10000);
         } catch (InterruptedException e) {
         }
         System.out.println ("...but he's stuck outside!");
+
         System.out.println ("Fido starts barking...");
-        System.out.println ("...so Gina grabs the remote control.");
-        remote.pressButton ();
+        barkRecognizer.recognize ("Woof");
+
         System.out.println ("Fido's back inside...");
         //remote.pressButton ();
     }
