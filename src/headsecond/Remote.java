@@ -1,5 +1,8 @@
 package headsecond;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by Administrator on 2017/6/27.
  */
@@ -16,6 +19,14 @@ public class Remote {
             dogDoor.close ();
         } else {
             dogDoor.open ();
+            final Timer timer = new Timer ();
+            timer.schedule (new TimerTask () {
+                @Override
+                public void run() {
+                    dogDoor.close ();
+                    timer.cancel ();
+                }
+            }, 5000);
         }
     }
 }
