@@ -13,9 +13,9 @@ public class Remote {
     public void pressButton() {
         System.out.println ("Pressing the remote control button...");
         if (dogDoor.isOpen ()) {
-            dogDoor.open ();
-        } else {
             dogDoor.close ();
+        } else {
+            dogDoor.open ();
         }
     }
 }
