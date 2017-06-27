@@ -24,6 +24,5 @@ public class DogDoorSimulator {
         barkRecognizer.recognize ("Woof");
 
         System.out.println ("Fido's back inside...");
-        //remote.pressButton ();
     }
 }

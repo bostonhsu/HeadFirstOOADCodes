@@ -4,3 +4,4 @@ requirements list:
 2. The remote must contain only one button. If it is opened, the door must be closed when press the button.
    If it is closed, the door must be opened when press the button.
 3. Once the dog door was opened, if it was closed, it must be closed automatically.
+-----------------
