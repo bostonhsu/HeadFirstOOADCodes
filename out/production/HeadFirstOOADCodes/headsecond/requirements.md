@@ -1,7 +1,20 @@
-The Gina and Todd's Dog Door, version 2
+Final Dog Door, version 3.0
+----------------------------------
+Todo things of Dog Door
 requirements list:
-1. The height of dog door must be 12 inches at least.
-2. The remote must contain only one button. If it is opened, the door must be closed when press the button.
-   If it is closed, the door must be opened when press the button.
-3. Once the dog door was opened, if it was closed, it must be closed automatically.
+1. 主人的狗在叫，吵着要出去。            
+2. 叫声识别器“听见”叫声。                         2.1 主人听到她的狗在叫。
+3. 假如是主人的狗在叫，叫声识别器
+   送出请求给狗门以打开狗门。                     3.1 主人按下遥控器按钮。
+4. 狗门打开。
+5. 主人的狗跑出去。
+6. 主人的狗办它的事。
+    6.1 狗门自动关闭。
+    6.2 主人的狗在叫，吵着要进来。
+    6.3 叫声识别器“听见”叫声（再一次）            6.31 主人听到她的狗在叫（再一次）。
+    6.4 假如是主人的狗在叫，叫声识别器
+        送出请求给狗门以打开狗门。                6.41 主人按下遥控器按钮。
+    6.5 狗门打开（再一次）。
+7. 主人的狗回来，进门。
+8. 狗门自动关闭。
 -----------------

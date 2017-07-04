@@ -1,5 +1,8 @@
 package headsecond;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Created by Administrator on 2017/6/27.
  */
@@ -12,10 +15,14 @@ public class BarkRecognizer {
 
     public void recognize(Bark bark) {
         System.out.println ("   BarkRecognizer: Heard a '" + bark + "'");
-        if (dogDoor.getAllowedBark ().equals (bark)) {
-            dogDoor.open ();
-        } else {
-            System.out.println ("This dog is not allowed.");
+        ArrayList allowedBarks = dogDoor.getAllowedBarks ();
+        for (Iterator iterator = allowedBarks.iterator (); iterator.hasNext ();) {
+            Bark allowedBark = (Bark)iterator.next ();
+            if (allowedBark.equals (bark)) {
+                dogDoor.open ();
+                return;
+            }
         }
+        System.out.println ("This dog is not allowed.");
     }
 }

@@ -1,5 +1,6 @@
 package headsecond;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -9,6 +10,11 @@ import java.util.TimerTask;
 public class DogDoor {
     private boolean open;
     private Bark allowedBark;
+    private ArrayList<Bark> allowedBarks;
+
+    public ArrayList<Bark> getAllowedBarks() {
+        return allowedBarks;
+    }
 
     public void setAllowedBark(Bark allowedBark) {
         this.allowedBark = allowedBark;
@@ -20,6 +26,7 @@ public class DogDoor {
 
     public DogDoor() {
         this.open = false;
+        allowedBarks = new ArrayList<Bark> ();
     }
 
     public void open() {
@@ -42,5 +49,9 @@ public class DogDoor {
 
     public boolean isOpen() {
         return open;
+    }
+
+    public void addAllowedBark(Bark rowlf) {
+        allowedBarks.add (rowlf);
     }
 }
