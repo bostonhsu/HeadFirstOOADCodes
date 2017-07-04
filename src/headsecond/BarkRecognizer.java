@@ -12,6 +12,10 @@ public class BarkRecognizer {
 
     public void recognize(String bark) {
         System.out.println ("   BarkRecognizer: Heard a '" + bark + "'");
-        dogDoor.open ();
+        if (dogDoor.getAllowedBarkString ().equalsIgnoreCase (bark)) {
+            dogDoor.open ();
+        } else {
+            System.out.println ("This dog is not allowed.");
+        }
     }
 }
