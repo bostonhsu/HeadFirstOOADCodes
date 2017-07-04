@@ -10,9 +10,9 @@ public class BarkRecognizer {
         this.dogDoor = dogDoor;
     }
 
-    public void recognize(String bark) {
+    public void recognize(Bark bark) {
         System.out.println ("   BarkRecognizer: Heard a '" + bark + "'");
-        if (dogDoor.getAllowedBarkString ().equalsIgnoreCase (bark)) {
+        if (dogDoor.getAllowedBark ().equals (bark)) {
             dogDoor.open ();
         } else {
             System.out.println ("This dog is not allowed.");
