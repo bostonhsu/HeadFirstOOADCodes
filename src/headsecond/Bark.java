@@ -15,6 +15,12 @@ public class Bark {
     }
 
     public boolean equals(Object bark) {
-        return sound.equals (((Bark)bark).getSound ());
+        if (bark instanceof Bark) {
+            Bark otherBark = (Bark)bark;
+            if (this.sound.equalsIgnoreCase (otherBark.getSound ())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
