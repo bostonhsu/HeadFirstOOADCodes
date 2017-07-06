@@ -3,21 +3,12 @@ package headfirst;
 /**
  * Created by Administrator on 2017/6/26.
  */
-public class GuitarSpec {
-    private Builder builder;
-    private Type type;
-    private Wood backWood, topWood;
-    private String model;
-
+public class GuitarSpec extends InstrumentSpec {
 
     private int numStrings;
 
-    public GuitarSpec(Builder builder, Type type, Wood backWood, Wood topWood, String model, int numStrings) {
-        this.builder = builder;
-        this.type = type;
-        this.backWood = backWood;
-        this.topWood = topWood;
-        this.model = model;
+    public GuitarSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood, int numStrings) {
+        super (builder, model, type, backWood, topWood);
         this.numStrings = numStrings;
     }
 
@@ -25,38 +16,15 @@ public class GuitarSpec {
         return numStrings;
     }
 
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public boolean matches(GuitarSpec otherSpec) {
-        if (builder != otherSpec.builder)
+    @Override
+    public boolean matches(InstrumentSpec otherSpec) {
+        if (!super.matches (otherSpec)) {
             return false;
-        if ((model != null) && (!model.equals ("")) && (!model.equals (otherSpec.model)))
+        }
+        if (!(otherSpec instanceof GuitarSpec))
             return false;
-        if (type != otherSpec.type)
-            return false;
-        if (numStrings != otherSpec.numStrings)
-            return false;
-        if (backWood != otherSpec.backWood)
-            return false;
-        if (topWood != otherSpec.topWood)
+        GuitarSpec spec = (GuitarSpec)otherSpec;
+        if (numStrings != spec.numStrings)
             return false;
         return true;
     }

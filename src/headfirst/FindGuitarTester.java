@@ -11,13 +11,13 @@ public class FindGuitarTester {
         Inventory inventory = new Inventory ();
         initializeInventory (inventory);
 
-        GuitarSpec whatErinLikes = new GuitarSpec (Builder.FENDER, Type.ELECTRIC, Wood.ALDER, Wood.ALDER, "Stratocastor", 12);
+        GuitarSpec whatErinLikes = new GuitarSpec (Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 12);
         List matchingGuitars = inventory.search (whatErinLikes);
         if (!matchingGuitars.isEmpty ()) {
             System.out.println ("Erin, you might like these guitars:");
             for (Iterator iterator = matchingGuitars.iterator (); iterator.hasNext ();) {
                 Guitar guitar = (Guitar)iterator.next ();
-                GuitarSpec spec = guitar.getSpec ();
+                GuitarSpec spec = (GuitarSpec) guitar.getSpec ();
                 System.out.println ("We have a " +
                         spec.getBuilder () + " " + spec.getModel () + " " +
                         spec.getType () + " guitar:\n" +
@@ -29,10 +29,33 @@ public class FindGuitarTester {
         } else {
             System.out.println ("Sorry, Erin, we have nothing for you.");
         }
+
+        System.out.println ("---------------------\n--------------searching mandolin--------");
+
+        MandolinSpec whatDouLikes = new MandolinSpec (Builder.GIBSON, "BostonHsu", Type.ACOUSTIC, Wood.COCOBOLO, Wood.COCOBOLO, Style.A);
+        List matchingMandolins = inventory.search (whatDouLikes);
+        if (!matchingMandolins.isEmpty ()) {
+            System.out.println ("Dou, you might like these mandolins:");
+            for (Iterator iterator = matchingMandolins.iterator (); iterator.hasNext ();) {
+                Mandolin mandolin = (Mandolin) iterator.next ();
+                MandolinSpec spec = (MandolinSpec) mandolin.getSpec ();
+                System.out.println ("We have a " +
+                        spec.getBuilder () + " " + spec.getModel () + " " +
+                        spec.getType () + " mandolin:\n" +
+                        spec.getBackWood () + " back and sides,\n" +
+                        spec.getTopWood () + " top.\nYou can have it for only $" +
+                        mandolin.getPrice () + "!");
+            }
+
+        } else {
+            System.out.println ("Sorry, Dou, we have nothing for you.");
+        }
     }
 
     private static void initializeInventory(Inventory inventory) {
-        inventory.addGuitar ("V95693", 1499.95, new GuitarSpec (Builder.FENDER, Type.ELECTRIC, Wood.ALDER, Wood.ALDER,"Stratocastor", 12));
-        inventory.addGuitar ("V9512", 1549.95, new GuitarSpec (Builder.FENDER, Type.ELECTRIC, Wood.ALDER, Wood.ALDER,"Stratocastor", 12));
+        inventory.addInstrument ("V95693", 1499.95, new GuitarSpec (Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 12));
+        inventory.addInstrument ("V9512", 1549.95, new GuitarSpec (Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 12));
+        inventory.addInstrument ("M01", 3398.21, new MandolinSpec (Builder.GIBSON, "BostonHsu", Type.ACOUSTIC, Wood.COCOBOLO, Wood.COCOBOLO, Style.A));
+        inventory.addInstrument ("M02", 2152.38, new MandolinSpec (Builder.GIBSON, "BostonHsu", Type.ACOUSTIC, Wood.COCOBOLO, Wood.COCOBOLO, Style.F));
     }
 }
